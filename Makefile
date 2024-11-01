@@ -23,6 +23,7 @@ DATA		:=
 INCLUDES	:=	include
 GRAPHICS	:=	data
 NITRODATA	:=	nitrofiles
+POSIX		:= ./desmume/desmume/src/frontend/posix
 DESMUME := ./desmume/desmume/src/frontend/posix/cli/desmume-cli
 GDB := $(DEVKITARM)/bin/arm-none-eabi-gdb
 
@@ -153,11 +154,7 @@ endif
 #---------------------------------------------------------------------------------------
 init:
 	git submodule update --init
-	cd ./desmume/desmume/src/frontend/posix
-	./desmume/src/frontend/posix/autogen.sh
-	./configure --enable-gdb-stub
-	sudo make install
-	cd ../../../../..
+	cd $(POSIX) && ./autogen.sh && ./configure --enable-gdb-stub && make && sudo make install
 
 run: $(BUILD)
 	$(DESMUME) --disable-sound nds-badge.nds
