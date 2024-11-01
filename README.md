@@ -1,8 +1,12 @@
 # nds-badge
 This is the code for the NDS badge I wore to Furry Migration 2024.  
+
+![Photo of a DSi with a drawing of my fursona on it.](http://www.jusentari.com/assets/jusentari_badge.jpg)
+
 It's not really extensible, but I thought it would be a good guide for others to make their own NDS badges.  
   
 Makefile mostly copied from the Devkitpro template.  
+Shoutout to the handful of Minnesota hotel rooms that got me through this.  
 
 ## Dependencies
 Devkitpro needs to be installed: https://devkitpro.org/wiki/Getting_Started  
