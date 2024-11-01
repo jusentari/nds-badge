@@ -10,11 +10,11 @@ Arch: `sudo pacman -S nds-dev`
 Desmume is a submodule
 
 ## How to build
-Run `make desmume`
+Run `make -f Makefile_desmume` (kinda janky but eh)
 Run `make run`
 
 ## Debug
-Run make debug, then run target remote localhost:20000 in gdb to debug
+Run `make debug`, then run `target remote localhost:20000` in gdb to debug
 
 ## How to use
 Select - Open the menu

@@ -152,9 +152,6 @@ $(OUTPUT).elf	:	$(OFILES)
 #---------------------------------------------------------------------------------------
 endif
 #---------------------------------------------------------------------------------------
-init:
-	git submodule update --init
-	cd $(POSIX) && ./autogen.sh && ./configure --enable-gdb-stub && make && sudo make install
 
 run: $(BUILD)
 	$(DESMUME) --disable-sound nds-badge.nds

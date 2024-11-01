@@ -1,0 +1,5 @@
+POSIX		:= ./desmume/desmume/src/frontend/posix
+make:
+	git submodule update --init
+	cd $(POSIX) && ./autogen.sh 
+	cd $(POSIX) && ./configure --enable-gdb-stub && make && sudo make install
