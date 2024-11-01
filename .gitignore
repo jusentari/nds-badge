@@ -1,0 +1,5 @@
+build/
+.cache/
+nds-badge.elf
+nds-badge.nds
+bmps/
